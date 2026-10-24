@@ -1,65 +1,9 @@
 <!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Portal de Treinamento</title>
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: grid;
-            place-items: center;
-            background: #edf1f7;
-            font-family: Arial, sans-serif
-        }
-
-        .login {
-            background: white;
-            padding: 35px;
-            width: 360px;
-            max-width: 85vw;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px #0002
-        }
-
-        input,
-        button {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 13px;
-            margin: 9px 0;
-            border-radius: 6px;
-            font-size: 15px
-        }
-
-        input {
-            border: 1px solid #ccc
-        }
-
-        button {
-            background: #2358d5;
-            color: white;
-            border: 0;
-            cursor: pointer
-        }
-
-        small {
-            color: #666
-        }
-    </style>
-</head>
-
-<body>
-    <main class="login">
-        <h2>Segurança Cibernética</h2>
-        <p>Treine sua capacidade de identificar e prevenir ameaças cibernéticas.</p>
-        <form id="loginForm"><input id="usuario" placeholder="Usuário" autocomplete="off" required><input
-                id="senha" type="password" placeholder="Senha" autocomplete="off" required><button
-                type="submit">Entrar</button></form><small>Após o cadastro, você será redirecionado para a página de resultados.</small>
-    </main>
-    <script>document.getElementById('loginForm').addEventListener('submit', function (e) { e.preventDefault(); const registro = { usuario: document.getElementById('usuario').value, senhaPreenchida: document.getElementById('senha').value.length > 0, dataHora: new Date().toISOString(), evento: 'tentativa_login_simulada' }; const historico = JSON.parse(localStorage.getItem('registrosTreinamento') || '[]'); historico.push(registro); localStorage.setItem('registrosTreinamento', JSON.stringify(historico)); this.reset(); window.location.href = 'resultado.html'; });</script>
-</body>
-
-</html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Atividade de Cibersegurança</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#edf1f7;font-family:Arial,sans-serif;color:#17253b}.card{width:min(690px,92vw);background:white;border-radius:14px;padding:38px;box-shadow:0 8px 30px #0002}.eyebrow{color:#315cc8;font-size:12px;font-weight:700;letter-spacing:.08em}h1{font-size:30px;line-height:1.25}p{color:#4a5870;line-height:1.6}.topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:25px 0}.topic{background:#f3f6fb;border-radius:8px;padding:17px;font-size:15px}a{display:block;background:#2358d5;color:white;text-align:center;text-decoration:none;padding:15px;border-radius:7px;font-weight:700}a:hover{background:#1948b3}@media(max-width:500px){.card{padding:24px}.topics{grid-template-columns:1fr}h1{font-size:25px}}
+</style></head>
+<body><main class="card"><div class="eyebrow">AVALIAÇÃO • SEGURANÇA DA INFORMAÇÃO</div><h1>Atividade de conhecimentos em Cibersegurança</h1><p>Nesta atividade, você colocará em prática os conceitos estudados em sala de aula. Prepare-se para responder questões sobre os seguintes temas:</p>
+<div class="topics"><div class="topic">🎣 Phishing</div><div class="topic">🧠 Engenharia social</div><div class="topic">👁️ Spyware</div><div class="topic">🦠 Malware</div><div class="topic">🔐 Proteção de contas</div><div class="topic">🛡️ Segurança digital</div></div>
+<p>Leia atentamente as orientações apresentadas durante a atividade.</p><a href="login.html">Próximo →</a></main></body></html>
